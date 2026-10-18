@@ -1,6 +1,4 @@
-// ============================================
-// STEP 1 Task 9.1
-// ============================================
+//step 1
 const heading = document.querySelector("h1");
 const contents = document.querySelectorAll(".content");
 const contactForm = document.getElementById("contact-form");
@@ -28,10 +26,7 @@ console.log(document.querySelector(".does-not-exist")); // null
 const navTexts = [...navItems].map(item => item.textContent.trim());
 console.log(navTexts);
 
-
-// ============================================
-// STEP 2 Task 9.2
-// ============================================
+//step 2
 const header = document.querySelector("header");
 const navInsideHeader = header.querySelector("nav");
 
@@ -54,12 +49,9 @@ console.log(childListItems);
 console.log(bodyFromFooter);
 console.log(headerFromLink);
 
-
-// ============================================
-// STEP 3 Task 9.3
-// ============================================
+//step 3
 // Change the heading
-heading.textContent = "Welcome to My Website";
+heading.textContent = "Moran Cement Company Limited Website";
 
 // Update the first navigation link
 firstNavLink.href = "https://developer.mozilla.org";
@@ -77,7 +69,7 @@ contents[0].classList.add("highlight");
 contents[1].classList.toggle("accent");
 
 // Injection demo
-const userInput = <img src="x" onerror="alert('hacked!')">;
+const userInput = "<img src=\"x\" onerror=\"alert('hacked!')\">";
 
 document.getElementById("unsafe").innerHTML = userInput;
 document.getElementById("safe").textContent = userInput;
@@ -85,11 +77,7 @@ document.getElementById("safe").textContent = userInput;
 // Use textContent for a user's comment because it displays
 // the input as text instead of interpreting it as HTML.
 
-
-// ============================================
-// STEP 4 Task 9.4
-// ============================================
-
+//step 4
 // Create and append a navigation item
 function addNavItem(text, href) {
     const li = document.createElement("li");
