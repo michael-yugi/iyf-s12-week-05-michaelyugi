@@ -1,4 +1,9 @@
-//step 1
+const check = (label, ok) => console.log(`${ok ? "✓" : "✗"} ${label}`);
+
+// ============================================
+// STEP 1 — Task 9.1: Select elements
+// ============================================
+
 const heading = document.querySelector("h1");
 const contents = document.querySelectorAll(".content");
 const contactForm = document.getElementById("contact-form");
@@ -26,7 +31,10 @@ console.log(document.querySelector(".does-not-exist")); // null
 const navTexts = [...navItems].map(item => item.textContent.trim());
 console.log(navTexts);
 
-//step 2
+// ============================================
+// STEP 2 — Task 9.2: Traverse elements
+// ============================================
+
 const header = document.querySelector("header");
 const navInsideHeader = header.querySelector("nav");
 
@@ -49,9 +57,12 @@ console.log(childListItems);
 console.log(bodyFromFooter);
 console.log(headerFromLink);
 
-//step 3
+// ============================================
+// STEP 3 — Task 9.3: Change elements
+// ============================================
+
 // Change the heading
-heading.textContent = "Moran Cement Company Limited Website";
+heading.textContent = "Welcome to My Website";
 
 // Update the first navigation link
 firstNavLink.href = "https://developer.mozilla.org";
@@ -69,7 +80,7 @@ contents[0].classList.add("highlight");
 contents[1].classList.toggle("accent");
 
 // Injection demo
-const userInput = "<img src=\"x\" onerror=\"alert('hacked!')\">";
+const userInput = `<img src="x" onerror="alert('hacked!')">`;
 
 document.getElementById("unsafe").innerHTML = userInput;
 document.getElementById("safe").textContent = userInput;
@@ -77,7 +88,10 @@ document.getElementById("safe").textContent = userInput;
 // Use textContent for a user's comment because it displays
 // the input as text instead of interpreting it as HTML.
 
-//step 4
+// ============================================
+// STEP 4 — Task 9.4: Create, remove and clone
+// ============================================
+
 // Create and append a navigation item
 function addNavItem(text, href) {
     const li = document.createElement("li");
